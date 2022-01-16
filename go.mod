@@ -1,4 +1,4 @@
-module simple_docker
+module github.com/warjiang/simple_docker
 
 go 1.16
 

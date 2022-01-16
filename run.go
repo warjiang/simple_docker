@@ -1,11 +1,11 @@
 package main
 
 import (
-	"simple_docker/container"
-	log "github.com/sirupsen/logrus"
 	"os"
-)
 
+	log "github.com/sirupsen/logrus"
+	"github.com/warjiang/simple_docker/container"
+)
 
 func Run(tty bool, command string) {
 	parent := container.NewParentProcess(tty, command)
