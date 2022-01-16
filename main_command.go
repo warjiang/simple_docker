@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+	"simple_docker/container"
+
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
-	"simple_docker/container"
 )
 
 var runCommand = cli.Command{
@@ -19,7 +20,7 @@ var runCommand = cli.Command{
 	},
 	Action: func(context *cli.Context) error {
 		if len(context.Args()) < 1 {
-			return fmt.Errorf("Missing container command")
+			return fmt.Errorf("missing container command")
 		}
 		cmd := context.Args().Get(0)
 		tty := context.Bool("ti")
